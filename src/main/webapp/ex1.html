@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/js1219/resource/jquery-3.6.2.min.js"></script>
+<script>
+	// jQuery 소스를 사용하는 방법 : 직접 다운로드 후
+</script>
+</head>
+<body>
+	<button type="button" id="btn">click!</button>
+	<script>
+		// jQuery를 사용하지 않을때
+		/*
+		document.querySelector('#btn').addEventListener('click', function(){
+			alert('test');
+		});
+		*/
+		
+		// jQuery('#btn').click(function(){
+		// $는 jQuery문자의 별칭이다
+		$('#btn').click(function(){
+			alert('test');
+		});
+	</script>
+</body>
+</html>

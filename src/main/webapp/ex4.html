@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#createBtn').click(function() {
+			$('#target').html('<button type = "button" id = "newBtn">동적버튼</button>');
+		});
+		
+		/*
+		$('#newBtn').click(function() { // document ready 하고 실행되는 코드인데 이 시점에서는 #newBtn을 찾을 수 없어 실행이 안되는 코드
+			alert('동적버튼 클릭!');
+		});
+		*/
+		
+		// 동적으로 생성된 (처음 페이지 로딩시에는 존재하지 않은..) 생성된 태그의 이벤트 저리
+		$(document).on('click', '#newBtn', function() { // document를 리로딩하고 거기서 #newBtn을 찾는 코드
+			alert('동적버튼 클릭!');
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<div>
+		<button type = "button" id = "createBtn">동적버튼생성</button>
+	</div>
+	<div>
+		<h1>동적으로 생성된 버튼 태그</h1>
+		<div id = "target">
+			<!-- 새로운 (동적)버튼이 생성되는 공간 -->
+		</div>
+	</div>
+</body>
+</html>
